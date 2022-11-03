@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My blog</title>
+  </head>
+  <body>
+    <div class="content">
+        <div>
+          <h2>My blog (HAEUN KIM, 1970025)</h2>
+          <form method="POST" action="/delete" enctype="multipart/form-data">
+            {% for content in contents %}
+              <h3>{{content[1]}}</h3>
+	      {{content[0]}} <input type="checkbox" name="deletecheck" value="{{content[0]}}"> <br>
+              <img src={{ content[2] }} style="max-width: 512px"> <br>
+              {{content[3]}}
+              <hr width="50%" align="left" size="1px" />
+            {% endfor %}
+	        <input type="button" value="Upload" onClick="location.href='post'">
+          <input type="submit" value="Delete">
+          </form>
+        </div>
+    </div>
+  </body>
+</html>

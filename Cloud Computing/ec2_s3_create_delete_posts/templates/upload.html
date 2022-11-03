@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="content">
+      <h3>Upload new post</h3>
+      <div>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+          Title:<br>
+          <input type="text" name="title"><br><br>
+	        Text Editor:<br>
+	        <textarea name="text" cols="40" rows="5"></textarea><br><br>
+	        Upload Picture:<br>
+	        <input type="file" name="file"><br><br>
+          <input type="submit" value="Upload">
+        </form>
+	      <input type="button" value="List" onClick="location.href='/'">
+      </div>
+    </div>
+  </body>
+</html>
