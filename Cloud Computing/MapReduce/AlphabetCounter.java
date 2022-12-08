@@ -8,13 +8,13 @@ import org.apache.hadoop.mapred.JobClient;
 import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.TextOutputFormat;
-public class AlphabetCount {
+public class AlphabetCounter {
         public static void main(String[] args) throws IOException {
                 // 1. configuration Mapper & Reducer of Hadoop
                 JobConf conf = new JobConf();
                 conf.setJobName("Alphabetcount");
-                conf.setMapperClass(AlphabetCountMapper.class);
-                conf.setReducerClass(AlphabetCountReducer.class);
+                conf.setMapperClass(AlphabetMapper.class);
+                conf.setReducerClass(AlphabetReducer.class);
                 // 2. final output key type & value type
                 conf.setOutputKeyClass(Text.class);
                 conf.setOutputValueClass(IntWritable.class);
